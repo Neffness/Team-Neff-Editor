@@ -11,11 +11,11 @@ from Engine.Engine import Engine
         
 
 class EditorWindow(QMainWindow):
-    engine = None
+    _engine = None
     
     def __init__(self, engine, parent=None):
         super().__init__()
-        self.engine = engine
+        self._engine = engine
         self._init_menubar()
         self._init_GameWindow()
         
@@ -33,6 +33,10 @@ class EditorWindow(QMainWindow):
         
     def _init_GameWindow(self):
         self.setCentralWidget(GameWindow(self.engine))
+        
+    @property
+    def engine(self):
+        return self._engine
 
 
 def start_editor():
