@@ -14,10 +14,6 @@ class MainWindow(QMainWindow):
         
         mainMenu=self.menuBar()
         fileMenu=mainMenu.addMenu('File')
-        editMenu=mainMenu.addMenu('Edit')
-        viewMenu=mainMenu.addMenu('View')
-        searchMenu=mainMenu.addMenu('Search')
-        toolsMenu=mainMenu.addMenu('Tools')
         helpMenu=mainMenu.addMenu('Help')
         exitButton=QAction(QIcon('exit24.png'), 'Exit', self)
         exitButton.setShortcut('Ctrl+Q')
